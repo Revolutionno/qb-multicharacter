@@ -30,8 +30,8 @@ Added support for setting default number of characters per player per Rockstar l
 - [qb-weathersync](https://github.com/qbcore-framework/qb-weathersync) - For adjusting the weather while player is creating a character.
 
 ## Screenshots
-![Character Selection](https://github.com/Revolutionno/qb-multicharacter/blob/main/image.png)
-![Character Registration]([https://github.com/Revolutionno/qb-multicharacter/blob/main/image2.png](https://github.com/Revolutionno/qb-multicharacter/blob/main/Image2.png))
+![Character Selection](https://github.com/Revolutionno/qb-multicharacter/blob/main/Image2.png)
+![Character Registration](https://github.com/Revolutionno/qb-multicharacter/blob/main/Image2.png)
 
 ## Features
 - Slate theme by chip
