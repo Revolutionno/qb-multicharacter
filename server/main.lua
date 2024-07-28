@@ -21,7 +21,7 @@ local function GiveStarterItems(source)
             info.birthdate = Player.PlayerData.charinfo.birthdate
             info.type = "Class C Driver License"
         end
-        exports['qb-inventory']:AddItem(src, v.item, v.amount, false, info, 'qb-multicharacter:GiveStarterItems')
+        exports['ps-inventory']:AddItem(src, v.item, v.amount, false, info, 'qb-multicharacter:GiveStarterItems')
     end
 end
 
@@ -101,8 +101,8 @@ RegisterNetEvent('qb-multicharacter:server:loadUserData', function(cData)
             if GetResourceState('qb-apartments') == 'started' then
                 TriggerClientEvent('apartments:client:setupSpawnUI', src, cData)
             else
-                TriggerClientEvent('qb-spawn:client:setupSpawns', src, cData, false, nil)
-                TriggerClientEvent('qb-spawn:client:openUI', src, true)
+                TriggerClientEvent('chip-spawn:client:setupSpawns', src, cData, false, nil)
+                TriggerClientEvent('chip-spawn:client:openUI', src, true)
             end
         end
         TriggerEvent("qb-log:server:CreateLog", "joinleave", "Loaded", "green", "**".. GetPlayerName(src) .. "** (<@"..(QBCore.Functions.GetIdentifier(src, 'discord'):gsub("discord:", "") or "unknown").."> |  ||"  ..(QBCore.Functions.GetIdentifier(src, 'ip') or 'undefined') ..  "|| | " ..(QBCore.Functions.GetIdentifier(src, 'license') or 'undefined') .." | " ..cData.citizenid.." | "..src..") loaded..")
