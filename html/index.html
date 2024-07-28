@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -89,10 +89,6 @@
                                 <td>{{characters[selectedCharacter].charinfo.gender == 0 ? translations['male'] : translations['female']}}</td>
                             </tr>
                             <tr>
-                                <td>{{translations['nationality']}}:</td>
-                                <td>{{characters[selectedCharacter].charinfo.nationality}}</td>
-                            </tr>
-                            <tr>
                                 <td>{{translations['job']}}:</td>
                                 <td>{{characters[selectedCharacter].job.label}}</td>
                             </tr>
@@ -129,7 +125,7 @@
                                 :placeholder="translations['firstname']"
                                 solo
                                 hide-details="auto"
-                                background-color="#32456759"
+                                background-color="#161616"
                                 v-model="registerData.firstname"
                                 :disabled="!show.register"
                             ></v-text-field>
@@ -137,7 +133,7 @@
                                 :placeholder="translations['lastname']"
                                 solo
                                 hide-details="auto"
-                                background-color="#32456759"
+                                background-color="#161616"
                                 v-model="registerData.lastname"
                                 :disabled="!show.register"
                             ></v-text-field>
@@ -146,27 +142,16 @@
                                 :placeholder="translations['nationality']"
                                 solo
                                 hide-details="auto"
-                                background-color="#32456759"
+                                background-color="#161616"
                                 v-model="registerData.nationality"
                                 :disabled="!show.register"
                             ></v-text-field>
-                            <v-select
-                                v-else
-                                solo
-                                :placeholder="translations['nationality']"
-                                :items="nationalities"
-                                hide-details="auto"
-                                background-color="#32456759"
-                                v-ripple
-                                v-model="registerData.nationality"
-                                :disabled="!show.register"
-                            ></v-select>
                             <v-select
                                 solo
                                 :placeholder="translations['gender']"
                                 :items="[translations['male'], translations['female']]"
                                 hide-details="auto"
-                                background-color="#32456759"
+                                background-color="#161616"
                                 v-ripple
                                 v-model="registerData.gender"
                                 :disabled="!show.register"
@@ -187,7 +172,7 @@
                                         v-bind="attrs"
                                         v-on="on"
                                         solo
-                                        background-color="#32456759"
+                                        background-color="#161616"
                                         :disabled="!show.register"
                                     ></v-text-field>
                                 </template>
@@ -216,7 +201,7 @@
                                 </v-date-picker>
                             </v-dialog>
                         </div>
-                        <v-btn :disabled="!show.register" class="character-reg-btn" color="#DC143C" v-ripple @click="create_character" large>{{translations['create_button']}}</v-btn>
+                        <v-btn :disabled="!show.register" class="character-reg-btn" color="#585858" v-ripple @click="create_character" large>{{translations['create_button']}}</v-btn>
                     </div>
 
                     <div class="character-delete" :class="{'slide-top-fade-leave-active': show.delete == false, 'slide-top-fade-leave-to': show.delete == false}">
@@ -227,8 +212,8 @@
                         <p>{{translations['deletechar_description']}}</p>
 
                         <div class="character-delete-btns">
-                            <v-btn :disabled="!show.delete" color="#2f8643" v-ripple class="character-delete-btn" @click="delete_character">{{translations['confirm']}}</v-btn>
-                            <v-btn :disabled="!show.delete" color="#90293e" v-ripple class="character-delete-btn" @click="() => {show.characters = true; show.delete = false}">{{translations['cancel']}}</v-btn>
+                            <v-btn :disabled="!show.delete" color="#7e2222" v-ripple class="character-delete-btn" @click="delete_character">{{translations['confirm']}}</v-btn>
+                            <v-btn :disabled="!show.delete" color="#36ac2b" v-ripple class="character-delete-btn" @click="() => {show.characters = true; show.delete = false}">{{translations['cancel']}}</v-btn>
                         </div>
                     </div>
                 </div>
@@ -345,15 +330,14 @@
 
                 create_character: function() {
                     const registerData = this.registerData
-                    var profanityTest = (!regTest.test(registerData.firstname) && !regTest.test(registerData.nationality) && !regTest.test(registerData.lastname))
+                    var profanityTest = (!regTest.test(registerData.firstname) && !regTest.test(registerData.lastname))
 
-                    if (profanityTest && registerData.firstname !== undefined && registerData.firstname !== "" && registerData.lastname !== undefined && registerData.lastname !== "" && registerData.gender !== undefined && registerData.nationality !== undefined && registerData.nationality !== "" && registerData.date !== undefined) {
+                    if (profanityTest && registerData.firstname !== undefined && registerData.firstname !== "" && registerData.lastname !== undefined && registerData.lastname !== "" && registerData.gender !== undefined && registerData.date !== undefined) {
                         this.show.register = false
 
                         axios.post('https://qb-multicharacter/createNewCharacter', {
                             firstname: registerData.firstname,
                             lastname: registerData.lastname,
-                            nationality: registerData.nationality,
                             birthdate: registerData.date,
                             gender: registerData.gender,
                             cid: this.selectedCharacter,
