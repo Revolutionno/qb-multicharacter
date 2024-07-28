@@ -33,6 +33,9 @@ Added support for setting default number of characters per player per Rockstar l
 ![Character Selection](https://github.com/Revolutionno/qb-multicharacter/blob/main/Image2.png)
 ![Character Registration](https://github.com/Revolutionno/qb-multicharacter/blob/main/image.png)
 
+## Before Screenshots
+![Before](https://github.com/Revolutionno/qb-multicharacter-slate/blob/main/before.png)
+
 ## Features
 - Slate theme by chip
 - Removed Nationality
