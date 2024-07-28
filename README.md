@@ -1,5 +1,5 @@
 # qb-multicharacter
-Multi Character Feature for QB-Core Framework :people_holding_hands:
+Multi Character Feature for QB-Core Framework
 
 Added support for setting default number of characters per player per Rockstar license
 
@@ -24,7 +24,7 @@ Added support for setting default number of characters per player per Rockstar l
 
 ## Dependencies
 - [qb-core](https://github.com/qbcore-framework/qb-core)
-- [qb-spawn](https://github.com/qbcore-framework/qb-spawn) - Spawn selector
+- [qb-spawn](https://github.com/qbcore-framework/qb-spawn) - Spawn selector (If you want to use a custom one just change all instences qb-spawn to CustomScriptName)
 - [qb-apartments](https://github.com/qbcore-framework/qb-apartments) - For giving the player a apartment after creating a character.
 - [qb-clothing](https://github.com/qbcore-framework/qb-clothing) - For the character creation and saving outfits.
 - [qb-weathersync](https://github.com/qbcore-framework/qb-weathersync) - For adjusting the weather while player is creating a character.
@@ -34,6 +34,8 @@ Added support for setting default number of characters per player per Rockstar l
 ![Character Registration](https://cdn.discordapp.com/attachments/934470871333105674/1014215687700488304/unknown.png)
 
 ## Features
+- Slate theme by chip
+- Removed Nationality
 - Ability to create up to 5 characters and delete any character.
 - Ability to see character information during selection.
 
