@@ -1,4 +1,4 @@
-# qb-multicharacter
+# qb-multicharacter-slate
 Multi Character Feature for QB-Core Framework
 
 Added support for setting default number of characters per player per Rockstar license
@@ -34,7 +34,7 @@ Added support for setting default number of characters per player per Rockstar l
 ![Character Registration](https://github.com/Revolutionno/qb-multicharacter-slate/blob/main/image.png)
 
 ## Before Screenshots
-![Before](https://github.com/Revolutionno/qb-multicharacter-slate/blob/main/before.png)
+![Before][(https://github.com/Revolutionno/qb-multicharacter-slate/blob/main/before.png)](https://github.com/Revolutionno/qb-multicharacter-slate/blob/main/before.png)
 
 ## Features
 - Slate theme by chip
